@@ -11,6 +11,7 @@ public class HieuThuoc {
             public void run() {
                 new LoginView();
             }
+
         });
     }
 }
