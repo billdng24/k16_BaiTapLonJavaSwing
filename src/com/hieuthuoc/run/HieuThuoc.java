@@ -1,6 +1,7 @@
 package com.hieuthuoc.run;
 
 import com.hieuthuoc.view.LoginView;
+import com.hieuthuoc.view.ThongTinCaNhan;
 
 import javax.swing.*;
 
@@ -9,7 +10,7 @@ public class HieuThuoc {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new LoginView();
+                new ThongTinCaNhan().setVisible(true);
             }
 
         });

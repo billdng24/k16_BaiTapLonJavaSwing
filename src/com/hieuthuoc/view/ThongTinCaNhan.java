@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.testjf;
+package com.hieuthuoc.view;
+
+import javax.swing.*;
+import java.net.URL;
 
 /**
  *
@@ -38,14 +41,14 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         jTextFieldMa = new javax.swing.JTextField();
         jTextFieldDate = new javax.swing.JTextField();
         jTextFieldUserName = new javax.swing.JTextField();
-        jTextFieldPassword = new javax.swing.JTextField();
-        jTextFieldPasswordAgain = new javax.swing.JTextField();
+        jTextFieldPassword = new javax.swing.JPasswordField();
+        jTextFieldPasswordAgain = new javax.swing.JPasswordField();
         jLabelHo = new javax.swing.JLabel();
         jTextFieldHo = new javax.swing.JTextField();
         jLabelTen = new javax.swing.JLabel();
         jTextFieldTen = new javax.swing.JTextField();
         jLabelGioiTinh = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        BtnHienThiMatKhau = new javax.swing.JRadioButton();
         jComboBoxGioiTinh = new javax.swing.JComboBox<>();
         jLabelDiaChi = new javax.swing.JLabel();
         jTextFieldDiaChi = new javax.swing.JTextField();
@@ -96,7 +99,6 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         );
 
         jPanelBody.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông tin nhân viên"));
-        jPanelBody.setToolTipText("");
 
         jPanelBodyInfo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Các thông tin cơ bản", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 8))); // NOI18N
 
@@ -110,9 +112,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelPasswordAgain.setText("Mật khẩu mới:");
 
-        jTextFieldMa.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldMa.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldMa.setToolTipText("");
+        jTextFieldMa.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldMa.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldMa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,19 +120,13 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldDate.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldDate.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDate.setToolTipText("");
+        jTextFieldDate.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldDate.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        jTextFieldUserName.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldUserName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldUserName.setToolTipText("");
+        jTextFieldUserName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldUserName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        jTextFieldPassword.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldPassword.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldPassword.setToolTipText("");
+        jTextFieldPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldPassword.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,16 +134,12 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldPasswordAgain.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldPasswordAgain.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldPasswordAgain.setToolTipText("");
+        jTextFieldPasswordAgain.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldPasswordAgain.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jLabelHo.setText("Họ:");
 
-        jTextFieldHo.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldHo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldHo.setToolTipText("");
+        jTextFieldHo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldHo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldHo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,9 +149,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelTen.setText("Tên:");
 
-        jTextFieldTen.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldTen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldTen.setToolTipText("");
+        jTextFieldTen.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldTen.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldTen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,16 +159,15 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelGioiTinh.setText("Giới tính:");
 
-        jRadioButton1.setText("Hiện mật khẩu");
-        jRadioButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnHienThiMatKhau.setText("Hiện mật khẩu");
+        BtnHienThiMatKhau.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnHienThiMatKhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                BtnHienThiMatKhauActionPerformed(evt);
             }
         });
 
         jComboBoxGioiTinh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
-        jComboBoxGioiTinh.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jComboBoxGioiTinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxGioiTinhActionPerformed(evt);
@@ -189,9 +176,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelDiaChi.setText("Địa chỉ:");
 
-        jTextFieldDiaChi.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldDiaChi.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDiaChi.setToolTipText("");
+        jTextFieldDiaChi.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldDiaChi.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldDiaChi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,9 +186,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelCMND.setText("CMND:");
 
-        jTextFieldCMND.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldCMND.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldCMND.setToolTipText("");
+        jTextFieldCMND.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldCMND.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldCMND.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,9 +196,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jLabelSdt.setText("Số điện thoại:");
 
-        jTextFieldSdt.setForeground(new java.awt.Color(185, 179, 179));
-        jTextFieldSdt.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldSdt.setToolTipText("");
+        jTextFieldSdt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldSdt.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextFieldSdt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,37 +228,38 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
                                                 .addGap(106, 106, 106)
                                                 .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBodyInfoLayout.createSequentialGroup()
+                                                                .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabelDiaChi, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabelHo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                         .addGroup(jPanelBodyInfoLayout.createSequentialGroup()
-                                                                                .addComponent(jLabelDiaChi)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(jTextFieldDiaChi))
-                                                                        .addGroup(jPanelBodyInfoLayout.createSequentialGroup()
-                                                                                .addComponent(jLabelHo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                                .addComponent(jTextFieldHo, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(jTextFieldHo, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(44, 44, 44)
                                                                                 .addComponent(jLabelTen, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(18, 18, 18)
-                                                                                .addComponent(jTextFieldTen, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)))
+                                                                                .addComponent(jTextFieldTen, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelBodyInfoLayout.createSequentialGroup()
+                                                                                .addComponent(jComboBoxGioiTinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                                        .addComponent(jTextFieldDiaChi, javax.swing.GroupLayout.Alignment.LEADING))
                                                                 .addGap(29, 29, 29))
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBodyInfoLayout.createSequentialGroup()
                                                                 .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addGroup(jPanelBodyInfoLayout.createSequentialGroup()
-                                                                                .addComponent(jLabelSdt)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(jTextFieldSdt))
                                                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelBodyInfoLayout.createSequentialGroup()
                                                                                 .addComponent(jLabelGioiTinh)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                                .addComponent(jComboBoxGioiTinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                .addGap(0, 0, Short.MAX_VALUE))
                                                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelBodyInfoLayout.createSequentialGroup()
-                                                                                .addComponent(jLabelCMND)
+                                                                                .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                        .addComponent(jLabelSdt)
+                                                                                        .addComponent(jLabelCMND, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(jTextFieldCMND)))
+                                                                                .addGroup(jPanelBodyInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                        .addComponent(jTextFieldCMND)
+                                                                                        .addComponent(jTextFieldSdt))))
                                                                 .addGap(30, 30, 30))))
                                         .addGroup(jPanelBodyInfoLayout.createSequentialGroup()
-                                                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(BtnHienThiMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelBodyInfoLayout.setVerticalGroup(
@@ -318,8 +300,8 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
                                         .addComponent(jTextFieldPasswordAgain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabelSdt, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextFieldSdt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                                .addComponent(jRadioButton1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BtnHienThiMatKhau))
         );
 
         javax.swing.GroupLayout jPanelBodyLayout = new javax.swing.GroupLayout(jPanelBody);
@@ -327,9 +309,9 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         jPanelBodyLayout.setHorizontalGroup(
                 jPanelBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBodyLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap(20, Short.MAX_VALUE)
                                 .addComponent(jPanelBodyInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
+                                .addContainerGap())
         );
         jPanelBodyLayout.setVerticalGroup(
                 jPanelBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,7 +337,6 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
 
         jButtonExit.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jButtonExit.setText("Thoát");
-        jButtonExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitActionPerformed(evt);
@@ -367,7 +348,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         jPanelFunctionLayout.setHorizontalGroup(
                 jPanelFunctionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelFunctionLayout.createSequentialGroup()
-                                .addGap(347, 347, 347)
+                                .addGap(300, 300, 300)
                                 .addComponent(jButtonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButtonExit)
@@ -400,7 +381,11 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
                                 .addContainerGap())
         );
 
-        jPanelMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        URL imgURL = getClass().getResource("/com/hieuthuoc/image/uneti100.jpg");
+        ImageIcon icon = new ImageIcon(imgURL);
+        JLabel imageLabel = new JLabel(icon);
+        imageLabel.setBounds(-12, 350, 160, 175);
+        jPanelMenu.add(imageLabel);
 
         jButtonLapHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonLapHoaDon.setText("Lập hoá đơn");
@@ -455,7 +440,6 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         jButtonThongTinCaNhan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonThongTinCaNhan.setText("Thông tin cá nhân");
         jButtonThongTinCaNhan.setAutoscrolls(true);
-        jButtonThongTinCaNhan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonThongTinCaNhan.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButtonThongTinCaNhan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -536,10 +520,6 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
     private void jTextFieldMaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
@@ -552,7 +532,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void BtnHienThiMatKhauActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -600,6 +580,10 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }
 
+    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -637,6 +621,7 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
+    private javax.swing.JRadioButton BtnHienThiMatKhau;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonKhachHang;
     private javax.swing.JButton jButtonLapHoaDon;
@@ -665,16 +650,16 @@ public class ThongTinCaNhan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelFunction;
     private javax.swing.JPanel jPanelHead;
     private javax.swing.JPanel jPanelMenu;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JTextField jTextFieldCMND;
     private javax.swing.JTextField jTextFieldDate;
     private javax.swing.JTextField jTextFieldDiaChi;
     private javax.swing.JTextField jTextFieldHo;
     private javax.swing.JTextField jTextFieldMa;
-    private javax.swing.JTextField jTextFieldPassword;
-    private javax.swing.JTextField jTextFieldPasswordAgain;
+    private javax.swing.JPasswordField jTextFieldPassword;
+    private javax.swing.JPasswordField jTextFieldPasswordAgain;
     private javax.swing.JTextField jTextFieldSdt;
     private javax.swing.JTextField jTextFieldTen;
     private javax.swing.JTextField jTextFieldUserName;
     // End of variables declaration
+
 }
