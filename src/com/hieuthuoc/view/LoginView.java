@@ -2,6 +2,7 @@ package com.hieuthuoc.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 public class LoginView extends JFrame {
     public LoginView() {
@@ -16,17 +17,20 @@ public class LoginView extends JFrame {
         panel.setLayout(null);
         panel.setBackground(Color.WHITE);
 
-        // Thêm hình ảnh vào form
-        ImageIcon icon = new ImageIcon("path/to/your/image.png"); // Đường dẫn tới ảnh
-        JLabel imageLabel = new JLabel(icon);
-        imageLabel.setBounds(100, 20, 150, 150); // Đặt vị trí và kích thước của ảnh
-        panel.add(imageLabel);
-
         // Thêm nhãn "Welcome"
         JLabel welcomeLabel = new JLabel("Welcome");
+        welcomeLabel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 0));
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 24));
         welcomeLabel.setBounds(110, 180, 120, 30);
         panel.add(welcomeLabel);
+
+        //Ảnh
+        URL imgURL = getClass().getResource("/com/hieuthuoc/image/uneti100.jpg");
+            ImageIcon icon = new ImageIcon(imgURL);
+            JLabel imageLabel = new JLabel(icon);
+            imageLabel.setBounds(100, 20, 160, 175);
+            panel.add(imageLabel);
+
 
         // Thêm nhãn và trường nhập email
         JLabel emailLabel = new JLabel("Email:");
@@ -55,11 +59,11 @@ public class LoginView extends JFrame {
         loginButton.setFont(new Font("Arial", Font.BOLD, 14));
         panel.add(loginButton);
 
-        // Thêm nhãn "Sign Up"
-        JLabel signupLabel = new JLabel("Don't have an account? Sign Up");
-        signupLabel.setBounds(90, 440, 200, 30);
-        signupLabel.setForeground(Color.GRAY);
-        panel.add(signupLabel);
+//        // Thêm nhãn "Sign Up"
+//        JLabel signupLabel = new JLabel("Don't have an account? Sign Up");
+//        signupLabel.setBounds(90, 440, 200, 30);
+//        signupLabel.setForeground(Color.GRAY);
+//        panel.add(signupLabel);
 
         // Thêm panel vào frame
         add(panel);
